@@ -1,0 +1,85 @@
+
+/* JavaFX CSS - Leave this comment until you have at least create one rule which uses -fx-Property */
+
+.topPane{
+	-fx-background-color: #1082a1;
+	
+}
+
+.leftPane{
+	-fx-background-color: #3e4951;
+}
+
+.btnl{
+	-fx-background-color: #3e4951;
+}
+
+.btnl:hover{
+	-fx-background-color: #1082a1;
+	-fx-background-radius: 10px;
+	-fx-text-fill: #fff;
+	
+}
+
+.menuitem{
+	-fx-font-family: Arial Black;
+	-fx-font-size: 17px;
+	-fx-font-weight: Bold;
+	
+	
+}
+
+.menuitem:hover{
+	-fx-text-fill: #fff;
+	-fx-background-radius: 10px;
+	-fx-cursor: hand;
+	
+}
+
+.btnm{
+	-fx-background-color:#18aed3;
+	-fx-background-radius: 10px;
+	-fx-cursor: hand;
+	
+	
+	
+}
+
+.btnm:hover{
+	-fx-background-color: #1082a1;
+	-fx-effect: dropshadow(three-pass-box,rgba(0,0,0,0.8),10,0,1,0);
+	-fx-cursor: hand;
+	-fx-text-fill: #fff;
+}
+.btnm:focused{
+	-fx-background-color: #1082a1;
+	-fx-text-fill: #fff;
+}
+
+.tree-table-view{
+	-fx-background-color: transparent;
+	-fx-border-radius: 8px;
+	-fx-border-color: #3e4951;
+	-fx-padding: -1px;
+	
+}
+.tree-table-view .table-column{
+	-fx-font-family: "Avenir Next Condensed";
+	-fx-font-weight: bold;
+	-fx-text-fill: #3e4951;
+	-fx-cursor: hand;
+}
+
+.tree-table-view .column-header-background .label{
+	-fx-background-color: #1082a1;
+	-fx-background-insets: 0 0 0 0;
+	-fx-background-radius: 5px;
+	-fx-text-fill: #fff;
+	-fx-font-family: "Arial";
+	-fx-font-weight: bold;	
+	
+}
+.tree-table-view .column-header, .filter{
+	-fx-background-color: transparent;
+	-fx-size: 33px;
+}

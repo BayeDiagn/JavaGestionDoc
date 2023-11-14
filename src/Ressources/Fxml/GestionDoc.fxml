@@ -1,0 +1,479 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.MenuButton?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.TreeTableColumn?>
+<?import javafx.scene.control.TreeTableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="564.0" prefWidth="1131.0" stylesheets="@../application.css" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gestionController">
+   <children>
+      <Pane prefHeight="53.0" prefWidth="1131.0" styleClass="topPane">
+         <children>
+            <Label layoutX="27.0" layoutY="9.0" prefHeight="30.0" prefWidth="94.0" text="SCHOOL" textFill="WHITE">
+               <font>
+                  <Font name="Avenir Next Condensed Bold" size="24.0" />
+               </font>
+            </Label>
+            <FontAwesomeIconView fx:id="bars" fill="WHITE" glyphName="BARS" layoutX="149.0" layoutY="37.0" size="30.0" tabSize="10">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </FontAwesomeIconView>
+            <FontAwesomeIconView fx:id="close" fill="#f55b5b" glyphName="CLOSE" layoutX="152.0" layoutY="35.0" size="25.0" visible="false">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </FontAwesomeIconView>
+            <Label fx:id="titre" layoutX="233.0" layoutY="18.0" text="Label" textFill="WHITE" visible="false">
+               <font>
+                  <Font name="Helvetica" size="14.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+      <Pane fx:id="leftPane" layoutX="-4.0" layoutY="53.0" prefHeight="516.0" prefWidth="188.0" styleClass="leftPane">
+         <children>
+            <MenuButton layoutX="32.0" layoutY="41.0" mnemonicParsing="false" popupSide="RIGHT" styleClass="btnl" text="LICENCE 1" textFill="#0ab6e1">
+              <items>
+                <MenuItem fx:id="s1" mnemonicParsing="false" onAction="#handlefirstSl" styleClass="menuitem" text="Semestre 1" />
+                <MenuItem mnemonicParsing="false" onAction="#handleSecondSl" styleClass="menuitem" text="Semestre 2" />
+              </items>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <font>
+                  <Font name="Arial Black" size="17.0" />
+               </font>
+            </MenuButton>
+            <MenuButton layoutX="32.0" layoutY="94.0" mnemonicParsing="false" popupSide="RIGHT" styleClass="btnl" text="LICENCE 2" textFill="#0ab6e1">
+               <items>
+                  <MenuItem mnemonicParsing="false" onAction="#handleThirdSl" styleClass="menuitem" text="Semestre 3" />
+                  <MenuItem mnemonicParsing="false" onAction="#handleFourSl" styleClass="menuitem" text="Semestre 4" />
+               </items>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <font>
+                  <Font name="Arial Black" size="17.0" />
+               </font>
+            </MenuButton>
+            <MenuButton layoutX="32.0" layoutY="153.0" mnemonicParsing="false" popupSide="RIGHT" styleClass="btnl" text="LICENCE 3" textFill="#0ab6e1">
+               <items>
+                  <MenuItem mnemonicParsing="false" onAction="#handleFiveSl" styleClass="menuitem" text="Semestre 5" />
+                  <MenuItem mnemonicParsing="false" onAction="#handleSixSl" styleClass="menuitem" text="Semestre 6" />
+               </items>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <font>
+                  <Font name="Arial Black" size="17.0" />
+               </font>
+            </MenuButton>
+         </children></Pane>
+      <Pane fx:id="centerPane1" layoutX="182.0" layoutY="50.0" prefHeight="516.0" prefWidth="946.0" visible="false">
+         <children>
+            <TreeTableView fx:id="tableL1" layoutX="92.0" layoutY="121.0" prefHeight="359.0" prefWidth="739.0" showRoot="false" visible="false">
+              <columns>
+                <TreeTableColumn fx:id="coursL1" prefWidth="473.0" resizable="false" text="COURS_EXAMEN_TD/TP" />
+                <TreeTableColumn fx:id="anneeL1" prefWidth="261.0" text="ANNEE" />
+              </columns>
+               <columnResizePolicy>
+                  <TreeTableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+               </columnResizePolicy>
+            </TreeTableView>
+            <MenuButton layoutX="34.0" layoutY="30.0" mnemonicParsing="false" onMouseClicked="#ato" prefHeight="28.0" prefWidth="94.0" styleClass="btnm" text="A.T.O" textFill="#3e4951">
+               <font>
+                  <Font name="Avenir Next Condensed Bold" size="13.0" />
+               </font>
+            </MenuButton>
+            <MenuButton layoutX="139.0" layoutY="30.0" mnemonicParsing="false" onMouseClicked="#se" prefHeight="28.0" prefWidth="94.0" styleClass="btnm" text="S.E" textFill="#3e4951">
+               <font>
+                  <Font name="Avenir Next Condensed Bold" size="13.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </MenuButton>
+            <MenuButton layoutX="248.0" layoutY="30.0" mnemonicParsing="false" onMouseClicked="#algebre1" styleClass="btnm" text="ALGEBRE I" textFill="#3e4951">
+               <font>
+                  <Font name="Avenir Next Condensed Bold" size="13.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </MenuButton>
+            <MenuButton layoutX="450.0" layoutY="30.0" mnemonicParsing="false" onMouseClicked="#tec" prefHeight="28.0" prefWidth="94.0" styleClass="btnm" text="T.E.C" textFill="#3e4951">
+               <font>
+                  <Font name="Avenir Next Condensed Bold" size="13.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </MenuButton>
+            <MenuButton layoutX="556.0" layoutY="30.0" mnemonicParsing="false" onMouseClicked="#anglais" styleClass="btnm" text="ANGLAIS" textFill="#3e4951">
+               <font>
+                  <Font name="Avenir Next Condensed Bold" size="13.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </MenuButton>
+            <MenuButton layoutX="651.0" layoutY="30.0" mnemonicParsing="false" onMouseClicked="#initiation" styleClass="btnm" text="INITIATION" textFill="#3e4951">
+               <font>
+                  <Font name="Avenir Next Condensed Bold" size="13.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </MenuButton>
+            <MenuButton layoutX="755.0" layoutY="30.0" mnemonicParsing="false" onMouseClicked="#algo" styleClass="btnm" text="ALGORITHME" textFill="#3e4951">
+               <font>
+                  <Font name="Avenir Next Condensed Bold" size="13.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </MenuButton>
+            <MenuButton layoutX="350.0" layoutY="30.0" mnemonicParsing="false" onMouseClicked="#analyse1" styleClass="btnm" text="ANALYSE I" textFill="#3e4951">
+               <font>
+                  <Font name="Avenir Next Condensed Bold" size="13.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </MenuButton>
+         </children>
+      </Pane>
+      <Pane fx:id="centerPane2" layoutX="184.0" layoutY="53.0" prefHeight="516.0" prefWidth="946.0" visible="false">
+         <children>
+            <MenuButton layoutX="23.0" layoutY="30.0" mnemonicParsing="false" onMouseClicked="#reseau" prefHeight="28.0" prefWidth="94.0" styleClass="btnm" text="RESEAUX" textFill="#3e4951">
+               <font>
+                  <Font name="Avenir Next Condensed Bold" size="13.0" />
+               </font>
+            </MenuButton>
+            <MenuButton layoutX="131.0" layoutY="30.0" mnemonicParsing="false" onMouseClicked="#pascal" prefHeight="28.0" prefWidth="163.0" styleClass="btnm" text="STRUCTURE DE DONNEES" textFill="#3e4951">
+               <font>
+                  <Font name="Avenir Next Condensed Bold" size="13.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </MenuButton>
+            <MenuButton layoutX="303.0" layoutY="30.0" mnemonicParsing="false" onMouseClicked="#algebre2" styleClass="btnm" text="ALGEBRE II" textFill="#3e4951">
+               <font>
+                  <Font name="Avenir Next Condensed Bold" size="13.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </MenuButton>
+            <MenuButton layoutX="401.0" layoutY="30.0" mnemonicParsing="false" onMouseClicked="#analyse2" styleClass="btnm" text="ANALYSE II" textFill="#3e4951">
+               <font>
+                  <Font name="Avenir Next Condensed Bold" size="13.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </MenuButton>
+            <MenuButton layoutX="501.0" layoutY="30.0" mnemonicParsing="false" onMouseClicked="#SP" prefHeight="28.0" prefWidth="156.0" styleClass="btnm" text="STATISTIQUE &amp; PROBA" textFill="#3e4951">
+               <font>
+                  <Font name="Avenir Next Condensed Bold" size="13.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </MenuButton>
+            <MenuButton layoutX="666.0" layoutY="30.0" mnemonicParsing="false" onMouseClicked="#electonique" styleClass="btnm" text="ELECTRICITE" textFill="#3e4951">
+               <font>
+                  <Font name="Avenir Next Condensed Bold" size="13.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </MenuButton>
+            <MenuButton layoutX="769.0" layoutY="30.0" mnemonicParsing="false" onMouseClicked="#TS" styleClass="btnm" text="TRAITEMENT DU SIGNAL" textFill="#3e4951">
+               <font>
+                  <Font name="Avenir Next Condensed Bold" size="13.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </MenuButton>
+            <TreeTableView fx:id="table1S2L1" layoutX="108.0" layoutY="103.0" prefHeight="365.0" prefWidth="711.0" showRoot="false" visible="false">
+              <columns>
+                <TreeTableColumn fx:id="col1S2L1" prefWidth="488.0" text="COURS_EXAMEN_TD/TP" />
+                <TreeTableColumn fx:id="col2S2L1" prefWidth="229.0" text="ANNEE" />
+              </columns>
+               <columnResizePolicy>
+                  <TreeTableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+               </columnResizePolicy>
+            </TreeTableView>
+         </children>
+      </Pane>
+      <Pane fx:id="centerPane3" layoutX="179.0" layoutY="50.0" prefHeight="516.0" prefWidth="946.0" visible="false">
+         <children>
+            <MenuButton layoutX="35.0" layoutY="30.0" mnemonicParsing="false" onMouseClicked="#langageC" prefHeight="28.0" prefWidth="94.0" styleClass="btnm" text="LANGAGE C" textFill="#3e4951">
+               <font>
+                  <Font name="Avenir Next Condensed Bold" size="13.0" />
+               </font>
+            </MenuButton>
+            <MenuButton layoutX="139.0" layoutY="30.0" mnemonicParsing="false" onMouseClicked="#elect" prefHeight="28.0" prefWidth="113.0" styleClass="btnm" text="ELECTRONIQUE" textFill="#3e4951">
+               <font>
+                  <Font name="Avenir Next Condensed Bold" size="13.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </MenuButton>
+            <MenuButton layoutX="266.0" layoutY="30.0" mnemonicParsing="false" onMouseClicked="#ro" styleClass="btnm" text="RECHERCHE OPER" textFill="#3e4951">
+               <font>
+                  <Font name="Avenir Next Condensed Bold" size="13.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </MenuButton>
+            <MenuButton layoutX="401.0" layoutY="30.0" mnemonicParsing="false" onMouseClicked="#serR" styleClass="btnm" text="SERVICE RESEAU" textFill="#3e4951">
+               <font>
+                  <Font name="Avenir Next Condensed Bold" size="13.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </MenuButton>
+            <MenuButton layoutX="529.0" layoutY="30.0" mnemonicParsing="false" onMouseClicked="#rsf" prefHeight="28.0" prefWidth="135.0" styleClass="btnm" text="RESEAUX SANS FILS" textFill="#3e4951">
+               <font>
+                  <Font name="Avenir Next Condensed Bold" size="13.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </MenuButton>
+            <MenuButton layoutX="670.0" layoutY="30.0" mnemonicParsing="false" onMouseClicked="#linuxS3" prefHeight="28.0" prefWidth="79.0" styleClass="btnm" text="LINUX" textFill="#3e4951">
+               <font>
+                  <Font name="Avenir Next Condensed Bold" size="13.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </MenuButton>
+            <MenuButton layoutX="756.0" layoutY="30.0" mnemonicParsing="false" onMouseClicked="#tecppp" prefHeight="28.0" prefWidth="87.0" styleClass="btnm" text="TEC/PPP" textFill="#3e4951">
+               <font>
+                  <Font name="Avenir Next Condensed Bold" size="13.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </MenuButton>
+            <MenuButton layoutX="851.0" layoutY="30.0" mnemonicParsing="false" onMouseClicked="#anglaisl2" styleClass="btnm" text="ANGLAIS" textFill="#3e4951">
+               <font>
+                  <Font name="Avenir Next Condensed Bold" size="13.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </MenuButton>
+            <TreeTableView fx:id="table2S3L2" layoutX="110.0" layoutY="122.0" prefHeight="336.0" prefWidth="773.0" showRoot="false" visible="false">
+              <columns>
+                <TreeTableColumn fx:id="col1S3L2" prefWidth="601.0" text="COURS_EXAMEN_TD/TP" />
+                <TreeTableColumn fx:id="col2S3L2" prefWidth="179.0" text="ANNEE" />
+              </columns>
+               <columnResizePolicy>
+                  <TreeTableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+               </columnResizePolicy>
+            </TreeTableView>
+         </children>
+      </Pane>
+      <Pane fx:id="centerPane4" layoutX="184.0" layoutY="50.0" prefHeight="516.0" prefWidth="946.0" visible="false">
+         <children>
+            <MenuButton layoutX="14.0" layoutY="30.0" mnemonicParsing="false" onMouseClicked="#javaL2" prefHeight="28.0" prefWidth="94.0" styleClass="btnm" text="JAVA" textFill="#3e4951">
+               <font>
+                  <Font name="Avenir Next Condensed Bold" size="13.0" />
+               </font>
+            </MenuButton>
+            <MenuButton layoutX="115.0" layoutY="30.0" mnemonicParsing="false" onMouseClicked="#sibd" prefHeight="28.0" prefWidth="87.0" styleClass="btnm" text="SIBD" textFill="#3e4951">
+               <font>
+                  <Font name="Avenir Next Condensed Bold" size="13.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </MenuButton>
+            <MenuButton layoutX="209.0" layoutY="30.0" mnemonicParsing="false" onMouseClicked="#web" styleClass="btnm" text="HTML/CSS/PHP" textFill="#3e4951">
+               <font>
+                  <Font name="Avenir Next Condensed Bold" size="13.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </MenuButton>
+            <MenuButton layoutX="328.0" layoutY="30.0" mnemonicParsing="false" onMouseClicked="#bdt" styleClass="btnm" text="BASES DES TELECOMS" textFill="#3e4951">
+               <font>
+                  <Font name="Avenir Next Condensed Bold" size="13.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </MenuButton>
+            <MenuButton layoutX="481.0" layoutY="30.0" mnemonicParsing="false" onMouseClicked="#rm" prefHeight="28.0" prefWidth="135.0" styleClass="btnm" text="RESEAUX MOBILES" textFill="#3e4951">
+               <font>
+                  <Font name="Avenir Next Condensed Bold" size="13.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </MenuButton>
+            <MenuButton layoutX="625.0" layoutY="30.0" mnemonicParsing="false" onMouseClicked="#maint" prefHeight="28.0" prefWidth="112.0" styleClass="btnm" text="MAINTENANCE" textFill="#3e4951">
+               <font>
+                  <Font name="Avenir Next Condensed Bold" size="13.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </MenuButton>
+            <MenuButton layoutX="746.0" layoutY="30.0" mnemonicParsing="false" onMouseClicked="#adLinux" prefHeight="28.0" prefWidth="94.0" styleClass="btnm" text="AD_LINUX" textFill="#3e4951">
+               <font>
+                  <Font name="Avenir Next Condensed Bold" size="13.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </MenuButton>
+            <MenuButton layoutX="853.0" layoutY="30.0" mnemonicParsing="false" onMouseClicked="#adWin" prefHeight="28.0" prefWidth="79.0" styleClass="btnm" text="AD_WIN" textFill="#3e4951">
+               <font>
+                  <Font name="Avenir Next Condensed Bold" size="13.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </MenuButton>
+            <TreeTableView fx:id="table2S4L2" layoutX="95.0" layoutY="102.0" prefHeight="365.0" prefWidth="751.0" showRoot="false" visible="false">
+              <columns>
+                <TreeTableColumn fx:id="col1S4L2" prefWidth="578.0" text="COURS_EXAMEN_TD/TP" />
+                <TreeTableColumn fx:id="col2S4L2" prefWidth="177.0" text="ANNEE" />
+              </columns>
+               <columnResizePolicy>
+                  <TreeTableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+               </columnResizePolicy>
+            </TreeTableView>
+         </children>
+      </Pane>
+      <Pane fx:id="centerPane5" layoutX="184.0" layoutY="53.0" prefHeight="516.0" prefWidth="946.0" visible="false">
+         <children>
+            <MenuButton layoutX="14.0" layoutY="30.0" mnemonicParsing="false" onMouseClicked="#routage" prefHeight="28.0" prefWidth="94.0" styleClass="btnm" text="ROUTAGE" textFill="#3e4951">
+               <font>
+                  <Font name="Avenir Next Condensed Bold" size="13.0" />
+               </font>
+            </MenuButton>
+            <MenuButton layoutX="120.0" layoutY="30.0" mnemonicParsing="false" onMouseClicked="#resEten" prefHeight="28.0" prefWidth="126.0" styleClass="btnm" text="RESAUX ETENDUS" textFill="#3e4951">
+               <font>
+                  <Font name="Avenir Next Condensed Bold" size="13.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </MenuButton>
+            <MenuButton layoutX="255.0" layoutY="30.0" mnemonicParsing="false" onMouseClicked="#sec" styleClass="btnm" text="SECURITE" textFill="#3e4951">
+               <font>
+                  <Font name="Avenir Next Condensed Bold" size="13.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </MenuButton>
+            <MenuButton layoutX="350.0" layoutY="30.0" mnemonicParsing="false" onMouseClicked="#maintPer" styleClass="btnm" text="MAINTENANCE" textFill="#3e4951">
+               <font>
+                  <Font name="Avenir Next Condensed Bold" size="13.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </MenuButton>
+            <MenuButton layoutX="467.0" layoutY="30.0" mnemonicParsing="false" onMouseClicked="#javaAva" prefHeight="28.0" prefWidth="110.0" styleClass="btnm" text="JAVA AVANCE" textFill="#3e4951">
+               <font>
+                  <Font name="Avenir Next Condensed Bold" size="13.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </MenuButton>
+            <MenuButton layoutX="586.0" layoutY="30.0" mnemonicParsing="false" onMouseClicked="#anglaisL3" prefHeight="28.0" prefWidth="83.0" styleClass="btnm" text="ANGLAIS" textFill="#3e4951">
+               <font>
+                  <Font name="Avenir Next Condensed Bold" size="13.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </MenuButton>
+            <MenuButton layoutX="680.0" layoutY="30.0" mnemonicParsing="false" onMouseClicked="#metho" prefHeight="28.0" prefWidth="119.0" styleClass="btnm" text="METHODOLOGIE" textFill="#3e4951">
+               <font>
+                  <Font name="Avenir Next Condensed Bold" size="13.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </MenuButton>
+            <MenuButton layoutX="807.0" layoutY="30.0" mnemonicParsing="false" onMouseClicked="#ddtic" prefHeight="28.0" prefWidth="113.0" styleClass="btnm" text="DROIT DES TICs" textFill="#3e4951">
+               <font>
+                  <Font name="Avenir Next Condensed Bold" size="13.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </MenuButton>
+            <TreeTableView fx:id="table3S5L3" layoutX="90.0" layoutY="109.0" prefHeight="359.0" prefWidth="758.0" showRoot="false" visible="false">
+              <columns>
+                <TreeTableColumn fx:id="col1S5L3" prefWidth="558.0" text="COURS_EXAMEN_TD/TP" />
+                <TreeTableColumn fx:id="col2S5L3" prefWidth="205.0" text="ANNEE" />
+              </columns>
+               <columnResizePolicy>
+                  <TreeTableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+               </columnResizePolicy>
+            </TreeTableView>
+         </children>
+      </Pane>
+      <Pane fx:id="centerPane6" layoutX="184.0" layoutY="53.0" prefHeight="516.0" prefWidth="946.0" visible="false">
+         <children>
+            <MenuButton layoutX="146.0" layoutY="30.0" mnemonicParsing="false" onMouseClicked="#gestionP" prefHeight="28.0" prefWidth="138.0" styleClass="btnm" text="GESTION DE PROJET" textFill="#3e4951">
+               <font>
+                  <Font name="Avenir Next Condensed Bold" size="13.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </MenuButton>
+            <MenuButton layoutX="366.0" layoutY="30.0" mnemonicParsing="false" onMouseClicked="#langageUml" prefHeight="28.0" prefWidth="138.0" styleClass="btnm" text="LANGAGE UML" textFill="#3e4951">
+               <font>
+                  <Font name="Avenir Next Condensed Bold" size="13.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </MenuButton>
+            <MenuButton layoutX="596.0" layoutY="30.0" mnemonicParsing="false" onMouseClicked="#soutenance" prefHeight="28.0" prefWidth="222.0" styleClass="btnm" text="QUELQUES SUJETS DE SOUTENANCE" textFill="#3e4951">
+               <font>
+                  <Font name="Avenir Next Condensed Bold" size="13.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </MenuButton>
+            <TreeTableView fx:id="table3S6L3" layoutX="103.0" layoutY="115.0" prefHeight="318.0" prefWidth="739.0" showRoot="false" visible="false">
+              <columns>
+                <TreeTableColumn fx:id="col1S6L3" prefWidth="535.0" text="COURS_EXAMEN_TD/TP" />
+                <TreeTableColumn fx:id="col2S6L3" prefWidth="205.0" text="ANNEE" />
+              </columns>
+               <columnResizePolicy>
+                  <TreeTableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+               </columnResizePolicy>
+            </TreeTableView>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>
